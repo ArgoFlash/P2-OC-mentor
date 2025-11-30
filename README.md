@@ -1,5 +1,7 @@
 ## Booki – Maquette HTML/CSS accessible et responsive
 
+Ici : https://argoflash.github.io/P2-OC-mentor/
+
 Ce projet est une **intégration front‑end de la page d’accueil Booki**, réalisée en HTML, CSS et un tout petit peu de JavaScript vanilla pour gérer des états d’interface (onglets et filtres).
 
 L’objectif est de reproduire fidèlement la maquette fournie, tout en appliquant de **bonnes pratiques d’accessibilité (WAVE / WCAG)** et un comportement **responsive jusqu’à 320&nbsp;px de large**.
