@@ -1,0 +1,524 @@
+:root {
+  --primary: #0065fc;
+  --primary-light: #deebff;
+  --background-grey: #f2f2f2;
+  --text-main: #1d1d1d;
+  /* Couleur de texte atténuée mais avec meilleur contraste AA sur fond clair */
+  --text-muted: #4a4a4a;
+  --border-radius-large: 24px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text-main);
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+
+.top-header {
+  border-bottom: 1px solid var(--background-grey);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  padding: 8px 0;
+  border-top: 3px solid transparent;
+  /* Légèrement plus foncé pour un meilleur contraste avec le fond blanc */
+  color: #2f2f2f;
+  font-weight: 500;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: var(--primary);
+  border-top-color: var(--primary);
+}
+
+/* Hero */
+
+.hero {
+  margin-top: 24px;
+}
+
+.hero h1 {
+  font-size: 26px;
+  margin: 0 0 8px;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* Search bar */
+
+.search-bar {
+  margin-top: 24px;
+  display: flex;
+  max-width: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.search-icon {
+  background-color: var(--background-grey);
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.search-bar input {
+  border: none;
+  padding: 0 16px;
+  flex: 1;
+  min-width: 0; /* permet à l'input de se réduire sur petits écrans */
+  font-size: 16px;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar button {
+  border: none;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 14px 22px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0051d8;
+}
+
+.search-button {
+  position: relative;
+}
+
+/* Filters */
+
+.filters {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.filters-label {
+  font-weight: 600;
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid #d9d9d9;
+  background-color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease,
+    transform 0.08s ease;
+}
+
+.filter-chip .chip-icon {
+  /* Icônes plus foncées pour un meilleur contraste (vérifications WAVE) */
+  color: #003399;
+  font-size: 18px;
+}
+
+.filter-chip:hover {
+  transform: translateY(-1px);
+  border-color: var(--primary);
+}
+
+.filter-chip.active {
+  background-color: var(--primary-light);
+  border-color: var(--primary);
+}
+
+.results-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1.5rem!important;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #d9d9d9;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--primary);
+}
+
+/* Content grid */
+
+.content-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 2fr 1.1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.card {
+  background-color: var(--background-grey);
+  border-radius: var(--border-radius-large);
+  padding: 24px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.icon-popular {
+  /* Icône étoile plus grande et plus foncée pour l'accessibilité */
+  font-size: 20px;
+  color: #003399;
+}
+
+/* Hébergements */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.stay-card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.stay-card img {
+  height: 130px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.stay-content {
+  padding: 10px 12px 12px;
+}
+
+.stay-content h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.stay-content p {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.rating {
+  /* Taille augmentée pour une meilleure lisibilité et contraste perçu */
+  font-size: 16px;
+  line-height: 1;
+  color: var(--primary); /* bleu accessible sur fond clair */
+}
+
+.rating .star {
+  margin-right: 1px;
+}
+
+.rating .empty {
+  /* Gris nettement plus foncé pour satisfaire les vérifications WAVE */
+  color: #737373;
+}
+
+.show-more {
+  display: inline-block;
+  margin-top: 18px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Populaires */
+
+.popular {
+  background-color: var(--background-grey);
+  display: flex;
+  flex-direction: column;
+}
+
+.popular-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 16px;
+}
+
+.popular-card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  flex: 1;
+}
+
+.popular-card a {
+  display: flex;
+  height: 100%;
+}
+
+.popular-card img {
+  width: 110px;
+  object-fit: cover;
+}
+
+.popular-content {
+  padding: 10px 14px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.popular-content h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.popular-content p {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* Activités */
+
+.activites {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.activites h2 {
+  margin: 0 0 18px;
+  font-size: 20px;
+}
+
+.activites-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.activity-card {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  background-color: #ffffff;
+}
+
+.activity-card img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.activity-card h3 {
+  margin: 10px 12px 12px;
+  font-size: 16px;
+}
+
+/* Footer */
+
+.site-footer {
+  background-color: var(--background-grey);
+  padding: 32px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.footer-column h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.footer-column a {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.footer-column a:hover {
+  color: var(--primary);
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .popular {
+    order: -1;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .activites-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center; /* centre le logo Booki sur mobile */
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 12px;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activites-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 470px) {
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .search-bar button {
+    width: 44px;
+    min-width: 44px;
+    padding: 0;
+    flex-shrink: 0;
+    font-size: 0; /* masque le texte "Rechercher" / "Explorer" */
+  }
+
+  .search-bar button::after {
+    content: "🔍";
+    font-size: 20px;  /* loupe bien visible */
+    line-height: 1;
+    color: #ffffff;
+  }
+}
+
+/* Spécifique mobile très petit (375px et moins) :
+   la barre bleue passe SOUS les onglets au lieu d'au‑dessus */
+@media (max-width: 375px) {
+  .nav-link {
+    border-top: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .nav-link.active,
+  .nav-link:hover {
+    border-bottom-color: var(--primary);
+  }
+}
+
+

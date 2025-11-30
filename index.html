@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Booki - Trouvez votre hébergement pour des vacances de rêve</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top-header">
+      <div class="container">
+        <nav class="nav">
+          <a href="#" class="logo">Booki</a>
+          <ul class="nav-links">
+            <li><a href="#hebergements" class="nav-link active">Hébergements</a></li>
+            <li><a href="#activites" class="nav-link">Activités</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="hero">
+          <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+          <p>En plein centre‑ville ou en pleine nature.</p>
+
+          <form class="search-bar" action="#" method="get">
+            <div class="search-icon" aria-hidden="true">📍</div>
+            <label class="sr-only" for="city">Ville</label>
+            <input
+              id="city"
+              name="city"
+              type="text"
+              placeholder="Marseille, France"
+              value="Marseille, France"
+            />
+            <button type="submit" class="search-button" aria-label="Rechercher un hébergement">
+              Rechercher
+            </button>
+          </form>
+
+          <div class="filters">
+            <span class="filters-label">Filtres</span>
+            <button type="button" class="filter-chip active">
+              <span class="chip-icon">💸</span>
+              <span>Économique</span>
+            </button>
+            <button type="button" class="filter-chip">
+              <span class="chip-icon">👨‍👩‍👧‍👦</span>
+              <span>Familial</span>
+            </button>
+            <button type="button" class="filter-chip">
+              <span class="chip-icon">💕</span>
+              <span>Romantique</span>
+            </button>
+            <button type="button" class="filter-chip">
+              <span class="chip-icon">⭐</span>
+              <span>Nos pépites</span>
+            </button>
+          </div>
+
+          <p class="results-info">
+            <span class="info-icon" aria-hidden="true">i</span>
+            Plus de 500 logements sont disponibles dans cette ville
+          </p>
+        </section>
+
+        <section class="content-grid">
+          <!-- Hébergements -->
+          <section id="hebergements" class="card hebergements">
+            <div class="section-header">
+              <h2>Hébergements à Marseille</h2>
+            </div>
+
+            <div class="cards-grid">
+              <article class="stay-card">
+                <a href="#">
+                  <img
+                    src="https://picsum.photos/seed/hotel-port/600/400"
+                    alt="Paysage de collines au lever du soleil"
+                  />
+                  <div class="stay-content">
+                    <h3>Refuge des Collines</h3>
+                    <p>Nuit à partir de 52&nbsp;€</p>
+                    <div class="rating" aria-label="4 étoiles sur 5">
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star empty">★</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="stay-card">
+                <a href="#">
+                  <img
+                    src="https://picsum.photos/seed/hotel-amina/600/400"
+                    alt="Tasse de café fumant posée sur un plaid"
+                  />
+                  <div class="stay-content">
+                    <h3>Chambres Pause Café</h3>
+                    <p>Nuit à partir de 96&nbsp;€</p>
+                    <div class="rating" aria-label="5 étoiles sur 5">
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="stay-card">
+                <a href="#">
+                  <img
+                    src="https://picsum.photos/seed/hotel-mouettes/600/400"
+                    alt="Skyline d'une grande ville au coucher du soleil"
+                  />
+                  <div class="stay-content">
+                    <h3>Appartement Vue Skyline</h3>
+                    <p>Nuit à partir de 76&nbsp;€</p>
+                    <div class="rating" aria-label="4 étoiles sur 5">
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star empty">★</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="stay-card">
+                <a href="#">
+                  <img
+                    src="https://picsum.photos/seed/hotel-mer/600/400"
+                    alt="Passerelle en bois dans la brume"
+                  />
+                  <div class="stay-content">
+                    <h3>Maison Brume du Pont</h3>
+                    <p>Nuit à partir de 46&nbsp;€</p>
+                    <div class="rating" aria-label="3 étoiles sur 5">
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star empty">★</span>
+                      <span class="star empty">★</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="stay-card">
+                <a href="#">
+                  <img
+                    src="https://picsum.photos/seed/canebiere/600/400"
+                    alt="Plage de galets avec coquillages"
+                  />
+                  <div class="stay-content">
+                    <h3>Auberge Plage de Sable</h3>
+                    <p>Nuit à partir de 25&nbsp;€</p>
+                    <div class="rating" aria-label="4 étoiles sur 5">
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star empty">★</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="stay-card">
+                <a href="#">
+                  <img
+                    src="https://picsum.photos/seed/panier/600/400"
+                    alt="Banc en bois au bord de l'eau"
+                  />
+                  <div class="stay-content">
+                    <h3>Auberge Quai Tranquille</h3>
+                    <p>Nuit à partir de 23&nbsp;€</p>
+                    <div class="rating" aria-label="4 étoiles sur 5">
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star empty">★</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+            </div>
+
+            <a href="#" class="show-more">Afficher plus</a>
+          </section>
+
+          <!-- Les plus populaires -->
+          <aside class="card popular">
+            <div class="section-header">
+              <h2>Les plus populaires</h2>
+              <span class="icon-popular" aria-hidden="true">★</span>
+            </div>
+
+            <div class="popular-list">
+              <article class="popular-card">
+                <a href="#">
+                  <img
+                    src="https://picsum.photos/seed/soleil-matin/600/400"
+                    alt="Route côtière vue du ciel"
+                  />
+                  <div class="popular-content">
+                    <h3>Escapade Route Côtière</h3>
+                    <p>Nuit à partir de 128&nbsp;€</p>
+                    <div class="rating" aria-label="5 étoiles sur 5">
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="popular-card">
+                <a href="#">
+                  <img
+                    src="https://picsum.photos/seed/coeur-eau/600/400"
+                    alt="Enfant lisant un livre sur un lit"
+                  />
+                  <div class="popular-content">
+                    <h3>Maison Lecture & Détente</h3>
+                    <p>Nuit à partir de 71&nbsp;€</p>
+                    <div class="rating" aria-label="4 étoiles sur 5">
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star empty">★</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="popular-card">
+                <a href="#">
+                  <img
+                    src="https://picsum.photos/seed/bleu-blanc/600/400"
+                    alt="Paysage de montagne au bord d'un lac"
+                  />
+                  <div class="popular-content">
+                    <h3>Chalet Vue sur le Lac</h3>
+                    <p>Nuit à partir de 68&nbsp;€</p>
+                    <div class="rating" aria-label="4 étoiles sur 5">
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star full">★</span>
+                      <span class="star empty">★</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Activités -->
+        <section id="activites" class="activites">
+          <h2>Activités à Marseille</h2>
+          <div class="activites-grid">
+            <article class="activity-card">
+              <a href="#">
+                <img
+                  src="https://picsum.photos/seed/vieux-port/800/500"
+                  alt="Montagnes sombres sous un ciel au crépuscule"
+                />
+                <h3>Randonnée au Crépuscule</h3>
+              </a>
+            </article>
+
+            <article class="activity-card">
+              <a href="#">
+                <img
+                  src="https://picsum.photos/seed/pomegues/800/500"
+                  alt="Voies ferrées au milieu de murs en pierre"
+                />
+                <h3>Balade le long des rails</h3>
+              </a>
+            </article>
+
+            <article class="activity-card">
+              <a href="#">
+                <img
+                  src="https://picsum.photos/seed/calanques/800/500"
+                  alt="Massif montagneux enneigé sous un ciel bleu"
+                />
+                <h3>Excursion en montagne</h3>
+              </a>
+            </article>
+
+            <article class="activity-card">
+              <a href="#">
+                <img
+                  src="https://picsum.photos/seed/notre-dame/800/500"
+                  alt="Chemin de campagne sinueux dans les champs"
+                />
+                <h3>Promenade sur les sentiers</h3>
+              </a>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-column">
+          <h3>À propos</h3>
+          <a href="#">Fonctionnement du site</a>
+          <a href="#">Conditions générales</a>
+          <a href="#">Données et confidentialité</a>
+        </div>
+        <div class="footer-column">
+          <h3>Nos hébergements</h3>
+          <a href="#">Charte qualité</a>
+          <a href="#">Proposer votre hôtel</a>
+        </div>
+        <div class="footer-column">
+          <h3>Assistance</h3>
+          <a href="#">Centre d'aide</a>
+          <a href="#">Nous contacter</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Active state de la barre bleue pour Hébergements / Activités
+      const navLinks = document.querySelectorAll(".nav-link");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.forEach((l) => l.classList.remove("active"));
+          link.classList.add("active");
+        });
+      });
+
+      // Filtres cliquables : le filtre devient bleu quand on clique (toggle)
+      const filterChips = document.querySelectorAll(".filter-chip");
+      filterChips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+          chip.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>
+
+
